@@ -2,6 +2,7 @@ import '@styles/globals.css';
 
 import Nav from '@components/Nav';
 import Provider from '@components/Provider';
+import Footer from '@components/Footer';
 
 export const metadata = {
     title: "Seed Tracking System",
@@ -17,6 +18,7 @@ const RootLayout = ({children}) => {
             <main className='app'>
                 {children}
             </main>
+            <Footer />
           </Provider>
         </body>
     </html>

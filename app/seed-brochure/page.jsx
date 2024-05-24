@@ -9,7 +9,6 @@ const SeedBrochure = () => {
         <p className="desc text-center">
             This website utilizes MFTSC's Seed Tracking System to display the available seed collection
         </p>
-
         <Feed />
 
     </section>

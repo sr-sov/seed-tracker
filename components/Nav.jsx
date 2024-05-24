@@ -24,7 +24,17 @@ const Nav = () => {
           <div className="flex gap-3 md:gap-5">
             <Link href="/seed-brochure"
             className="black_btn">
-              Seed Brochure
+              Seed Tracking System
+            </Link>
+
+            <Link href="/suppliers"
+            className="black_btn">
+              Suppliers
+            </Link>
+
+            <Link href="/sdm"
+            className="black_btn">
+              Seed Maps
             </Link>
 
             <Link href="/about"
@@ -42,6 +52,12 @@ const Nav = () => {
       {/* Mobile Navigation */}
       <div className="sm:hidden flex relative">
           <div className="flex">
+            <Image
+            src='/assets/icons/cart.png'
+            width={30}
+            height={30}
+            alt="Facebook Logo"
+            />
             <Image
               src="/assets/icons/menu.svg"
               width={37}

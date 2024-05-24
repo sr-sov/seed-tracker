@@ -5,7 +5,7 @@ import mysql from "mysql2/promise";
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-import PromptCard from './PromptCard';
+import SupplierPromptCard from './SupplierPromptCard';
 
 const PromptCardList = ({ data, handleTagClick }) => {
     const router = useRouter();
@@ -22,10 +22,10 @@ const PromptCardList = ({ data, handleTagClick }) => {
   
   return (
     <div className='mt-16 prompt_layout'>
-      {data.map((seed) => (
-        <PromptCard
-          key={seed.seed_collection_id}
-          seed={seed}
+      {data.map((supplier) => (
+        <SupplierPromptCard
+          key={supplier.id}
+          supplier={supplier}
           handleAdd={handleAdd}
         />
       ))}
@@ -35,33 +35,33 @@ const PromptCardList = ({ data, handleTagClick }) => {
 
 const Feed = () => {
   const [searchText, setSearchText] = useState('');
-  const [seeds, setSeeds] = useState([]);
+  const [suppliers, setSuppliers] = useState([]);
 
   const handleSearchChange = (e) => {
     setSearchText(e.target.value);
   }
 
   useEffect(() => {
-    const fetchSeeds = async () => {
-      const response = await fetch('/api/seed-collection');
+    const fetchSuppliers = async () => {
+      const response = await fetch('/api/suppliers');
       const data = await response.json();
 
-      setSeeds(data);
+      setSuppliers(data);
       console.log(data);
     }
 
 
-    fetchSeeds();
+    fetchSuppliers();
 
   }, []);
 
-  // Filter seeds based on search text
-  const filteredSeeds = seeds.filter((seed) => {
+  // Filter suppliers based on search text
+  const filteredSuppliers = suppliers.filter((supplier) => {
     // Implement your search logic here
     // You can search by supplier name, contact name, etc.
     const searchTermLower = searchText.toLowerCase();
     return (
-      seed.botanical_name.toLowerCase().includes(searchTermLower) || seed.species_name.toLowerCase().includes(searchTermLower) 
+      supplier.supplier_name.toLowerCase().includes(searchTermLower) || supplier.supply.toLowerCase().includes(searchTermLower) 
     );
   });
 
@@ -70,7 +70,7 @@ const Feed = () => {
       <form className='relative w-full flex-center'>
         <input
           type='text'
-          placeholder='Search for a seed via their botanical name OR species name'
+          placeholder='Search for a supplier OR the species available to a supplier'
           value={searchText}
           onChange={handleSearchChange}
           required
@@ -78,7 +78,7 @@ const Feed = () => {
         />
       </form>
       <PromptCardList
-        data={filteredSeeds}
+        data={filteredSuppliers}
         handleTagClick={() => {}}
       />
     </section>

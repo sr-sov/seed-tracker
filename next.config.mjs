@@ -8,6 +8,18 @@ const nextConfig = {
             port: '',
             pathname: '/a/**'
         },
+        {
+            protocol: 'https',
+            hostname: 'img.freepik.com',
+            port: '',
+            pathname: '/**'
+        },
+        {
+            protocol: 'https',
+            hostname: 'drive.google.com',
+            port: '',
+            pathname: '/**'
+        }
         ],
     },};
 

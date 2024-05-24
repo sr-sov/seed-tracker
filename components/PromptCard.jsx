@@ -1,5 +1,7 @@
 'use client';
 
+import Image from "next/image";
+
 const PromptCard = ({ seed, handleAdd, handleTagClick, handleEdit, handleDelete}) => {
 
   return (
@@ -21,6 +23,18 @@ const PromptCard = ({ seed, handleAdd, handleTagClick, handleEdit, handleDelete}
       <p className="font-inter text-sm text-slate-700">
         Region: <span className="text-slate-500">{seed.region}</span>
       </p> 
+      <p className="font-inter text-sm text-slate-700">
+        Quantity: <span className="text-slate-500">{seed.quantity}</span>
+      </p> 
+      {/*<div className="copy_btn">
+          <Image 
+            src='/assets/icons/add.svg'
+            width={12}
+            height={12}
+          />
+        </div>
+        */
+    }
     </div>
   )
 }
