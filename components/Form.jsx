@@ -18,6 +18,9 @@ const Form = ({
       <p>
       Email Address: {process.env.EMAIL_ADDRESS}
       </p>
+      <p>
+        {process.env.MYSQL_HOST}
+      </p>
 
       <form
         onSubmit={handleSubmit}
