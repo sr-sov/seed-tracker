@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import dotenv from 'dotenv';
 
 const Form = ({
   type, post, setPost, submitting, handleSubmit
@@ -10,6 +11,12 @@ const Form = ({
       </h1>
       <p className='desc text-left max-w-md'>
         Please feel free to contact us!
+      </p>
+      <p>
+      Phone Number: {process.env.CONTACT_NUMBER}
+      </p>
+      <p>
+      Email Address: {process.env.EMAIL_ADDRESS}
       </p>
 
       <form
