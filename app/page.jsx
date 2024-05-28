@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Home = () => {
   return (
     <section className="w-full flex-center flex-col m-auto">
-      <div class="overflow-hidden rounded-lg bg-cover bg-no-repeat" style={{backgroundImage:'url("/assets/images/bg.jpeg")'}}>
+      <div className="overflow-hidden rounded-lg bg-cover bg-no-repeat" style={{backgroundImage:'url("/assets/images/bg.jpeg")'}}>
         <div className="bg-cover py-12 px-24 opacity-mask w-full">
           <h1 className="head_text text-center">
               <span className="green_gradient">Mindanao Forest Tree Seed Center</span>
