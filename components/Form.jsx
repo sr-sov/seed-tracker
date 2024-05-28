@@ -18,10 +18,7 @@ const Form = ({
       <p>
       Email Address: {process.env.EMAIL_ADDRESS}
       </p>
-      <p>
-        {process.env.MYSQL_HOST}
-      </p>
-
+      
       <form
         onSubmit={handleSubmit}
         className='mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism'
