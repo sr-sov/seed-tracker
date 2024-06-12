@@ -34,6 +34,35 @@ const Footer = () => {
           height={30}
           alt="Instagram Logo"
           />
+          <Image
+          src='/assets/images/darwin.jpg'
+          width={30}
+          height={30}
+          alt="Instagram Logo"
+          />
+          <Image
+          src='/assets/images/apforgen.jpg'
+          width={30}
+          height={30}
+          alt="Instagram Logo"
+          />
+          <Image
+          src='/assets/images/alliance.jpg'
+          width={30}
+          height={30}
+          alt="Instagram Logo"
+          />
+          <Image
+          src='/assets/images/uk_aid.jpg'
+          width={30}
+          height={30}
+          alt="Instagram Logo"
+          />
+        </div>
+        <div className="flex items-center mx-auto text-gray-600 container justify-center gap-2 py-2">
+            <span className="font-normal">
+            This web page was made possible through the UK DARWIN PROJECT Strengthening
+            </span>
         </div>
     </footer>
   )
