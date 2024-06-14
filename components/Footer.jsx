@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
         <div className="flex items-center mx-auto text-gray-600 container justify-center gap-2 py-2">
             <span className="font-normal">
-            This web page was made possible through the UK DARWIN PROJECT Strengthening
+            This web application was made possible through the funds provided by UK Darwin Initiative, under the project “Strengthening Collaborative Tree Seed Supply Systems for Restoration in Asia”.  
             </span>
         </div>
     </footer>
